@@ -41,8 +41,9 @@ calc()
 x = True
 
 while x:
-
-    print("You got " + str(calc.points) + " points.\n")
+    result = round((calc.points / int(len(questions)) * 100), 1)
+    print("You got " + str(calc.points) + ' | ' + str(len(questions)) + " correct.")
+    print('This is ' + str(result) + '%\n')
     cn = input("Continue?...y/n ")
     cn.lower()
     if cn == 'y':
