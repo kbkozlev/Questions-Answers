@@ -9,10 +9,10 @@ def cls():
 
 wb = load_workbook("Questions&Answers.xlsx")  # Work Book
 ws = wb['Sheet1']  # Work Sheet
-questions = ws['A']  # Column
-answers = ws['B']
-questions_list = [questions[x].value for x in range(len(questions))]
-answers_list = [answers[x].value for x in range(len(answers))]
+questions = ws['A']  # Questions
+answers = ws['B']   # Answers
+questions_list = [questions[x].value for x in range(1, len(questions))]
+answers_list = [answers[x].value for x in range(1, len(answers))]
 
 rn = list(zip(questions_list, answers_list))
 random.shuffle(rn)
